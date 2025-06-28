@@ -1,0 +1,135 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: monospace;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to left , rgb(142, 60, 235) , rgb(103, 41, 248));
+
+}
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+     width: 50%;
+     height: 50%;
+     top: 50%;
+     left: 50%;
+     position: fixed;
+     transform: translate(-50% , -50%);
+     background-color: silver;
+     border-radius: 20px;
+}
+
+.form:hover{
+    transition: all .3s linear;
+    box-shadow: 1px 1px 10px black;
+}
+
+@media (max-width:768px){
+    .form{
+        padding: 20px 4px;
+    }
+}
+
+.form input{
+    /* padding: 10px 0 10px 20px; */
+    border: none;
+    outline: none;
+}
+
+.form input:hover{
+    border: none;
+    outline: none;
+}
+
+.form ::placeholder{
+    /* padding: 0 0 0 10px; */
+    margin-left: 10px;
+    font-size: 16px;
+    font-family: arial;
+    padding-left: 10px;
+}
+
+.form [type="submit"]{
+     border-radius: 10px;
+     border: none;
+     outline:none;
+     cursor: pointer;
+     background-image: linear-gradient( to right, #ae5bf3  ,  #f942b9 );
+}
+
+.form [type="submit"]:hover{
+    transition: all .3s linear;
+    box-shadow: 1px 1px 10px green;
+    background-image: linear-gradient( to right,  #f942b9 ,#ae5bf3  );
+}
+
+.form input ,a{
+    margin: 10px auto;
+    padding: 10px 0;
+    width: 80%;
+}
+
+
+.rem_div{
+    width: fit-content;
+    align-items: center;
+    margin: 0 auto;
+    display: flex;
+}
+.rem_div input{
+    width: 40px
+}
+.rem_div label{
+    display: flex;
+}
+
+
+/*  */
+#form_register {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 2px solid #444;
+    padding: 20px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    z-index: 1000;
+    width: 400px;
+}
+
+#form_register img{
+    width: 300px;
+    margin-left: 30px;
+    border-radius: 4px;
+}
+
+#form_register img:hover{
+    transition: all .3s linear;
+    box-shadow: 1px 1px 10px black;
+}
+
+#form_h1 {
+    text-align: right;
+    cursor: pointer;
+    font-size: 20px;
+    color: red;
+}
+
+.input {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
