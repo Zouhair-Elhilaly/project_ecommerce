@@ -40,17 +40,40 @@
 
 <script src="main.js"></script>
 
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- start test affichage error login -->
 
- <?php
+<?php
  ?> 
  
  <?php
- if($_SERVER['REQUEST_METHOD'] == 'GET'){
-    $error = $_GET['error'];
+ if($_SERVER['REQUEST_METHOD'] == 'GET'){}
+    // $error = $_GET['error'];
     ?>
     
-    <script>
+    <!-- <script>
     let divMessage = document.createElement("div");
     divMessage.style.cssText = `
     width: 60%;
@@ -59,35 +82,33 @@
     background-color: red;
     `;
 
-    let rem = document.querySelector("#rem1");
-    rem.appendChild(divMessage);
- </script>
+//     let rem = document.querySelector("#rem1"); -->
+<!-- //       rem.appendChild(divMessage);
+//  < /script>
 
-    <?php
-    if($error == 'password'){
-        ?> 
-        <script>
-            divMessage.textContent = 'password incorrect';
-            rem.appendChild(divMessage);
-        </script>
-        <?php
-    }else if($error == 'email'){
-        ?>
-        <script>
-            divMessage.textContent = 'email incorrect';
-            console.log("hello from email");
-            rem.appendChild(divMessage);
-        </script>
-        <?php
-    }else if($error == 'stmt_failed'){
-        ?>
-        <script>
-            divMessage.textContent = 'error for login the page can you test';
-            rem.appendChild(divMessage);
-        </script>
-        <?php
-    }
- }
- ?>
-</body>
-</html>
+//     < ?php
+//     if($error == 'password'){
+//         ? > 
+//         < script>
+//             divMessage.textContent = 'password incorrect';
+//             rem.appendChild(divMessage);
+//         < /script>
+//         < ?php
+//     }else if($error == 'email'){
+//         ? >
+//         < script>
+//             divMessage.textContent = 'email incorrect';
+//             console.log("hello from email");
+//             rem.appendChild(divMessage);
+//         < /script>
+//         < ? p hp
+//     }else if($error == 'stmt_failed'){
+//         ?>
+//         < s c ript>
+//             divMessage.textContent = 'error for login the page can you test';
+//             rem.appendChild(divMessage);
+//         </ script>
+//         < php
+//     }
+// // 
+ ?> -->

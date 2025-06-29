@@ -14,24 +14,41 @@ session_start();
 <body>
     <header>
         <div class="title">
-        <h2>AliExp</h2><?php echo $_SESSION['user_id'];
-?>
+        <h2 id="title">AliExp</h2>
         </div>
         <div class="shop">
             <ul>
                 <li><i class="fa-solid fa-cart-shopping"></i> <a href="shop_user.php">shop</a></li>
-                <li>profile<br><h3><?php  ; echo  $_SESSION['name'];?></h3></li>
+                <li><i class="fa-solid fa-user"></i><br><h3><?php  ; echo  $_SESSION['name'];?></h3></li>
+                <li><a href="log out.php">Log out</a></li>
             </ul>
-            <a href="log out.php">Log out</a>
+
         </div>
         <style>
 
-            ul li, .shop a{
+            .title h2{
+                background-color: yellowgreen;
+                padding: 8px 20px;
+                border-radius:  40px 0 ;
+                font-family: sans-serif;
+                letter-spacing: 1px;
+                cursor: pointer;
+            }
+
+            ul li {
                 padding: 20px;
                 background-color: beige;
                 border-radius: 5px;
                 box-shadow: 1px 1px 4px black;
                 cursor: pointer;
+                text-align: center;
+                align-items:center;
+                transition: all .3s linear;
+                font-family: monospace;
+                letter-spacing: 1px;
+            }
+            ul li:hover{
+                background-color: rgb(104, 104, 101);
             }
             .shop{
                 display: flex;
@@ -65,7 +82,7 @@ session_start();
                     $row[price]$
                 </div>
                     <div class='add_card'>
-                   <center> <a href='insert_card.php?id=$row[id]&user= $user_id' >
+                   <center> <a  href='insert_card.php?id=$row[id]&user= $user_id' >
                         ADD To Card
                     </a></center>
                     </div>
@@ -94,6 +111,7 @@ session_start();
         background-color:rgba(85, 168, 231, 0.41);
         padding: 10px;
         transition: all .3s linear;
+
     }
 
     .product:hover{
@@ -177,10 +195,12 @@ session_start();
         height: 20%;
         display: flex;
         justify-content: space-between;
-        background-color: aquamarine;
+        background-color: gold;
         align-items: center;
         padding: 0 10px;
         position: fixed;
+        z-index: 99;
+        box-shadow: 2px 0 6px black;
     }
 
     header ul{
@@ -192,4 +212,12 @@ session_start();
         font-weight: bold;
     }
 </style>
+
+<script>
+    let title = document.getElementById("title");
+    title.addEventListener('click' , () => {
+        window.location.href = 'dashboard_user.php';
+    });
+
+</script>
 </html>
